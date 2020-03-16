@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="wiadrodanych-kafka-streams:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/wiadrodanych_kafka_streams_jar</output-path>
+    <root id="archive" name="wiadrodanych-kafka-streams.jar">
+      <element id="module-output" name="wiadrodanych-kafka-streams" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/rocksdb/rocksdbjni/5.18.3/rocksdbjni-5.18.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.10.0/jackson-annotations-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/luben/zstd-jni/1.4.3-1/zstd-jni-1.4.3-1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.4.1/kafka-clients-2.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.0/jackson-datatype-jdk8-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/kafka/connect-json/2.4.1/connect-json-2.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.10.0/jackson-databind-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/xerial/snappy/snappy-java/1.1.7.3/snappy-java-1.1.7.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/kafka/connect-api/2.4.1/connect-api-2.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.10.0/jackson-core-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/lz4/lz4-java/1.6.0/lz4-java-1.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.4.1/kafka-streams-2.4.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
