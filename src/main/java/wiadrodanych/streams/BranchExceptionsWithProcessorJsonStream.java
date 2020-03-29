@@ -53,15 +53,15 @@ public class BranchExceptionsWithProcessorJsonStream {
                         return v;
                     }
                 })
-                .branch(
-                        (key, value) -> value.valid,
-                        (key, value) -> true // !value.valid
-                );
+        .branch(
+                (key, value) -> value.valid,
+                (key, value) -> true // !value.valid
+        );
 
-        personStream[valid].filter((k, v) -> v.age >= 18)
-                .to(OUTPUT_TOPIC, Produced.with(Serdes.String(), personSerde));
+personStream[valid].filter((k, v) -> v.age >= 18)
+        .to(OUTPUT_TOPIC, Produced.with(Serdes.String(), personSerde));
 
-        personStream[invalid].process(messageFailureHandlerSupplier);
+personStream[invalid].process(messageFailureHandlerSupplier);
 
         final Topology topology = builder.build();
         final KafkaStreams streams = new KafkaStreams(topology, props);

@@ -31,5 +31,4 @@ public class MessageFailureHandler implements Processor<String, Person> {
     @Override
     public void close() {
     }
-
 }

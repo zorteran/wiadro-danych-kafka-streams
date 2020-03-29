@@ -34,34 +34,33 @@ public class BranchExceptionsJsonStream {
         final StreamsBuilder builder = new StreamsBuilder();
         final Serde<Person> personSerde = Serdes.serdeFrom(new PersonSerializer(), new PersonDeserializer());
 
-        int valid = 0;
-        int invalid = 1;
+int valid = 0;
+int invalid = 1;
 
+KStream<String, Person>[] personStream = builder.stream(INPUT_TOPIC, Consumed.with(Serdes.String(), personSerde))
+        .peek(
+                (key, value) -> System.out.println("key=" + key + ", value=" + value)
+        )
+        .mapValues(v -> {
+            try {
+                v.name = v.name.substring(0, 1).toUpperCase() + v.name.substring(1).toLowerCase();
+                return v;
+            } catch (Exception exception) {
+                System.err.println("Occured an exception has... ");
+                exception.printStackTrace();
+                v.valid = false;
+                return v;
+            }
+        })
+        .branch(
+                (key, value) -> value.valid,
+                (key, value) -> true // !value.valid
+        );
 
-        KStream<String, Person>[] personStream = builder.stream(INPUT_TOPIC, Consumed.with(Serdes.String(), personSerde))
-                .peek(
-                        (key, value) -> System.out.println("key=" + key + ", value=" + value)
-                )
-                .mapValues(v -> {
-                    try {
-                        v.name = v.name.substring(0, 1).toUpperCase() + v.name.substring(1).toLowerCase();
-                        return v;
-                    } catch (Exception exception) {
-                        System.err.println("Occured an exception has... ");
-                        exception.printStackTrace();
-                        v.valid = false;
-                        return v;
-                    }
-                })
-                .branch(
-                        (key, value) -> value.valid,
-                        (key, value) -> true // !value.valid
-                );
+personStream[valid].filter((k, v) -> v.age >= 18)
+        .to(OUTPUT_TOPIC, Produced.with(Serdes.String(), personSerde));
 
-        personStream[valid].filter((k, v) -> v.age >= 18)
-                .to(OUTPUT_TOPIC, Produced.with(Serdes.String(), personSerde));
-
-        personStream[invalid].to(DLQ_TOPIC, Produced.with(Serdes.String(), personSerde));
+personStream[invalid].to(DLQ_TOPIC, Produced.with(Serdes.String(), personSerde));
 
         final Topology topology = builder.build();
         final KafkaStreams streams = new KafkaStreams(topology, props);

@@ -9,19 +9,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62d14eac-b584-4d28-8d2e-a7686779e008" name="Default Changelist" comment="Added DeadLetterQueue, Branch and Branch with Processor Streams">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsJsonStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsWithProcessorJsonStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/EntityBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processes/MessageFailureHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processes/MessageFailureHandlerSupplier.java" afterDir="false" />
+    <list default="true" id="62d14eac-b584-4d28-8d2e-a7686779e008" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/FirstTryJsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/SerDeByHandJsonStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/SecondTryJsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/SerDeJsonStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/ThirdTryJsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/FilterExceptionsJsonStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/handlers/MyDeserializationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/handlers/MyDeserializationExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsJsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsJsonStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsWithProcessorJsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsWithProcessorJsonStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processes/MessageFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processes/MessageFailureHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/queues/DeadLetterQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/queues/DeadLetterQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,8 +173,16 @@
       <workItem from="1585067820889" duration="8526000" />
       <workItem from="1585251567381" duration="4876000" />
       <workItem from="1585484220934" duration="3009000" />
-      <workItem from="1585502681550" duration="10214000" />
+      <workItem from="1585502681550" duration="12193000" />
     </task>
+    <task id="LOCAL-00001" summary="Added DeadLetterQueue, Branch and Branch with Processor Streams">
+      <created>1585520208495</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585520208495</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,10 +240,10 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="1047" y="589" key="#xdebugger.evaluate/0.27.3440.1413@0.27.3440.1413" timestamp="1585076760272" />
-    <state x="713" y="274" width="1483" height="876" key="CommitChangelistDialog2" timestamp="1585520186808">
+    <state x="713" y="274" width="1483" height="876" key="CommitChangelistDialog2" timestamp="1585520208395">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
-    <state x="713" y="274" width="1483" height="876" key="CommitChangelistDialog2/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186808" />
+    <state x="713" y="274" width="1483" height="876" key="CommitChangelistDialog2/0.27.3440.1413@0.27.3440.1413" timestamp="1585520208395" />
     <state width="453" height="526" key="DebuggerActiveHint" timestamp="1585076481181">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -292,6 +292,10 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="210" y="367" width="1022" height="737" key="SettingsEditor/0.27.3440.1413@0.27.3440.1413" timestamp="1584304717632" />
+    <state x="454" y="446" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1585520216949">
+      <screen x="0" y="27" width="3440" height="1413" />
+    </state>
+    <state x="454" y="446" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.3440.1413@0.27.3440.1413" timestamp="1585520216949" />
     <state x="1380" y="560" key="com.intellij.ide.util.TipDialog" timestamp="1585502683153">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
