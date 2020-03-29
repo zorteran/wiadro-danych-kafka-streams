@@ -15,6 +15,7 @@ public class MyDeserializationExceptionHandler implements DeserializationExcepti
 
     @Override
     public DeserializationHandlerResponse handle(ProcessorContext context, ConsumerRecord<byte[], byte[]> record, Exception exception) {
+        exception.printStackTrace();
         log.warn("Exception caught during Deserialization, taskId: {}, topic: {}, partition: {}, offset: {}", new Object[]{context.taskId(), record.topic(), record.partition(), record.offset(), exception});
         DeadLetterQueue dlq = DeadLetterQueue.getInstance();
         dlq.send(record.key(), record.value(), record.headers(), exception.getMessage());

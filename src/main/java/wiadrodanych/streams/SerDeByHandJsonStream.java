@@ -1,23 +1,20 @@
 package wiadrodanych.streams;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.Topology;
-import org.apache.kafka.streams.kstream.Consumed;
+import org.apache.kafka.streams.errors.LogAndContinueExceptionHandler;
 import org.apache.kafka.streams.kstream.Produced;
-import wiadrodanych.streams.handlers.MyDeserializationExceptionHandler;
 import wiadrodanych.streams.models.Person;
-import wiadrodanych.streams.models.serdes.PersonDeserializer;
-import wiadrodanych.streams.models.serdes.PersonSerializer;
 
 import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
 
-public class ThirdTryJsonStream {
+public class SerDeByHandJsonStream {
 
     public static final String INPUT_TOPIC = "wiaderko-input";
     public static final String OUTPUT_TOPIC = "wiaderko-output";
@@ -27,18 +24,33 @@ public class ThirdTryJsonStream {
 
         ObjectMapper mapper = new ObjectMapper();
         final StreamsBuilder builder = new StreamsBuilder();
-        final Serde<Person> personSerde = Serdes.serdeFrom(new PersonSerializer(), new PersonDeserializer());
-
-        builder.stream(INPUT_TOPIC, Consumed.with(Serdes.String(), personSerde))
+        builder.<String, String>stream(INPUT_TOPIC)
                 .peek(
-                        (key, value) -> System.out.println("key=" + key + ", value=" + value)
+                    (key, value) -> System.out.println("Input: key=" + key + ", value=" + value)
                 )
+                .mapValues(v -> {
+                    try {
+                        return mapper.readValue(v, Person.class);
+                    } catch (JsonProcessingException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
                 .mapValues((v -> {
                     v.name = v.name.substring(0, 1).toUpperCase() + v.name.substring(1).toLowerCase();
                     return v;
                 }))
                 .filter((k, v) -> v.age >= 18)
-                .to(OUTPUT_TOPIC, Produced.with(Serdes.String(), personSerde));
+                .mapValues(v -> {
+                    try {
+                        return mapper.writeValueAsString((v));
+                    } catch (JsonProcessingException e) {
+                        throw new RuntimeException(e);
+                    }
+                })
+                .peek(
+                        (key, value) -> System.out.println("Output: key=" + key + ", value=" + value)
+                )
+                .to(OUTPUT_TOPIC, Produced.with(Serdes.String(), Serdes.String()));
 
         final Topology topology = builder.build();
         final KafkaStreams streams = new KafkaStreams(topology, props);
@@ -69,7 +81,9 @@ public class ThirdTryJsonStream {
         Properties props = new Properties();
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "wiaderko-json-stream");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:29092");
-        props.put(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, MyDeserializationExceptionHandler.class);
+        props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
+        props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
+        props.put(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, LogAndContinueExceptionHandler.class);
         return props;
     }
 }
