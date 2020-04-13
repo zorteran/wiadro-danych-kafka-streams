@@ -19,18 +19,9 @@ public class LowercaseStream {
     public static void main(String[] args) throws Exception {
         Properties props = createProperties();
 
-        final StreamsBuilder builder = new StreamsBuilder();builder.<String, String>stream(INPUT_TOPIC)
-                .peek(
-                        (key, value) -> System.out.println("Input: key=" + key + ", value=" + value)
-                )
-                .mapValues(v -> v.toLowerCase())
-                .peek(
-                        (key, value) -> System.out.println("Output: key=" + key + ", value=" + value)
-                )
-                .to(OUTPUT_TOPIC, Produced.with(Serdes.String(), Serdes.String()));
+        LowercaseStream lowercaseStream = new LowercaseStream();
 
-        final Topology topology = builder.build();
-        final KafkaStreams streams = new KafkaStreams(topology, props);
+        final KafkaStreams streams = new KafkaStreams(lowercaseStream.createTopology(), props);
         final CountDownLatch latch = new CountDownLatch(1);
 
         // attach shutdown handler to catch control-c
@@ -49,6 +40,21 @@ public class LowercaseStream {
             System.exit(1);
         }
         System.exit(0);
+    }
+
+    public Topology createTopology() {
+        final StreamsBuilder builder = new StreamsBuilder();
+        builder.<String, String>stream(INPUT_TOPIC)
+                .peek(
+                        (key, value) -> System.out.println("Input: key=" + key + ", value=" + value)
+                )
+                .mapValues(v -> v.toLowerCase())
+                .peek(
+                        (key, value) -> System.out.println("Output: key=" + key + ", value=" + value)
+                )
+                .to(OUTPUT_TOPIC, Produced.with(Serdes.String(), Serdes.String()));
+
+        return builder.build();
     }
 
     private static Properties createProperties() {
