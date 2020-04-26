@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="wiadro-danych-kafka-streams" />
         <module name="wiadrodanych-kafka-streams" />
       </profile>
     </annotationProcessing>

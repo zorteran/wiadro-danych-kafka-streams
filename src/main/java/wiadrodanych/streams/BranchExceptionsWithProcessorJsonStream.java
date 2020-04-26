@@ -15,7 +15,7 @@ import wiadrodanych.streams.handlers.MyDeserializationExceptionHandler;
 import wiadrodanych.streams.models.Person;
 import wiadrodanych.streams.models.serdes.PersonDeserializer;
 import wiadrodanych.streams.models.serdes.PersonSerializer;
-import wiadrodanych.streams.processes.MessageFailureHandlerSupplier;
+import wiadrodanych.streams.processors.MessageFailureHandlerSupplier;
 
 import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
