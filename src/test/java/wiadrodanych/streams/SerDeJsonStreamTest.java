@@ -57,7 +57,7 @@ public class SerDeJsonStreamTest {
         Assert.assertEquals("Adam", outputPerson.name);
     }
 
-    @Test
+    @Test()
     public void personWithEmptyNameShouldNotBeProcessed(){
         Person inputPerson = new Person("", 17);
         inputTopic.pipeInput(inputPerson);

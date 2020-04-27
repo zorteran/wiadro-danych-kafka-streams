@@ -4,12 +4,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.apache.kafka.common.serialization.Deserializer;
 import wiadrodanych.streams.models.InputZtmRecord;
-import wiadrodanych.streams.models.OutputZtmRecord;
+import wiadrodanych.streams.models.ZtmRecord;
 
 import java.nio.charset.Charset;
 import java.util.Map;
 
-public class InputZtmRecordDeserializerExperiment implements Deserializer<OutputZtmRecord> {
+public class InputZtmRecordToZtmRecordDeserializer implements Deserializer<ZtmRecord> {
     private static final Charset CHARSET = Charset.forName("UTF-8");
     static private Gson gson = new GsonBuilder()
             .setDateFormat("yyyy-MM-dd HH:mm:ss")
@@ -21,10 +21,10 @@ public class InputZtmRecordDeserializerExperiment implements Deserializer<Output
     }
 
     @Override
-    public OutputZtmRecord deserialize(String s, byte[] bytes) {
+    public ZtmRecord deserialize(String s, byte[] bytes) {
             String rawRecord = new String(bytes, CHARSET);
             InputZtmRecord inputRecord = gson.fromJson(rawRecord, InputZtmRecord.class);
-            return new OutputZtmRecord(inputRecord);
+            return new ZtmRecord(inputRecord);
     }
 
     @Override

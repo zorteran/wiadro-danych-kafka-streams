@@ -28,26 +28,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62d14eac-b584-4d28-8d2e-a7686779e008" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/wiadro-danych-kafka-streams.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/ZtmStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/InputZtmRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/OutputZtmRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/GenericDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/GenericSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/InputZtmRecordDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/InputZtmRecordDeserializerExperiment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/InputZtmRecordSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/ZtmRecordDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessorSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/ZtmStreamTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/models/serdes/InputZtmRecordSerDeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/utils/GeoTools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsWithProcessorJsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsWithProcessorJsonStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processes/MessageFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/MessageFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processes/MessageFailureHandlerSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/MessageFailureHandlerSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/ZtmStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/ZtmStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/OutputZtmRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/ZtmRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/InputZtmRecordDeserializerExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/InputZtmRecordToZtmRecordDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/ZtmRecordDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/ZtmRecordDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessorSupplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/SerDeJsonStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/SerDeJsonStreamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/ZtmStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/ZtmStreamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/models/serdes/InputZtmRecordSerDeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/models/serdes/InputZtmRecordSerDeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,52 +106,24 @@
       <recent name="wiadrodanych.streams.models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ZtmStreamTest.streamFiltersOldRecords">
-    <configuration name="InputZtmRecordSerDeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ZtmStreamTest">
+    <configuration name="ZtmStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.ZtmStream" />
       <module name="wiadro-danych-kafka-streams" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wiadrodanych.streams.models.serdes.*" />
+          <option name="PATTERN" value="wiadrodanych.streams.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="wiadrodanych.streams.models.serdes" />
-      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.models.serdes.InputZtmRecordSerDeTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputZtmRecordSerDeTest.deserializeAndSerialize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in wiadro-danych-kafka-streams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wiadro-danych-kafka-streams" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wiadrodanych.streams.models.serdes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="wiadrodanych.streams.models.serdes" />
-      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.models.serdes.InputZtmRecordSerDeTest" />
-      <option name="METHOD_NAME" value="deserializeAndSerialize" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InputZtmRecordSerDeTest.ztmExperimentRecordDeserializationWorks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wiadro-danych-kafka-streams" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wiadrodanych.streams.models.serdes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="wiadrodanych.streams.models.serdes" />
-      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.models.serdes.InputZtmRecordSerDeTest" />
-      <option name="METHOD_NAME" value="ztmExperimentRecordDeserializationWorks" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -182,7 +145,7 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZtmStreamTest.streamFiltersOldRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ZtmStreamTest.streamComputesAreCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wiadro-danych-kafka-streams" />
       <extension name="coverage">
         <pattern>
@@ -192,7 +155,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="wiadrodanych.streams" />
       <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.ZtmStreamTest" />
-      <option name="METHOD_NAME" value="streamFiltersOldRecords" />
+      <option name="METHOD_NAME" value="streamComputesAreCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZtmStreamTest.streamComputesSomething" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiadro-danych-kafka-streams" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wiadrodanych.streams.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wiadrodanych.streams" />
+      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.ZtmStreamTest" />
+      <option name="METHOD_NAME" value="streamComputesSomething" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -208,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ZtmStreamTest.streamFiltersOldRecords" />
-        <item itemvalue="JUnit.InputZtmRecordSerDeTest.deserializeAndSerialize" />
-        <item itemvalue="JUnit.InputZtmRecordSerDeTest.ztmExperimentRecordDeserializationWorks" />
         <item itemvalue="JUnit.ZtmStreamTest" />
-        <item itemvalue="JUnit.InputZtmRecordSerDeTest" />
+        <item itemvalue="JUnit.All in wiadro-danych-kafka-streams" />
+        <item itemvalue="JUnit.ZtmStreamTest.streamComputesAreCorrectly" />
+        <item itemvalue="JUnit.ZtmStreamTest.streamComputesSomething" />
+        <item itemvalue="Application.ZtmStream" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +223,8 @@
       <workItem from="1587849281519" duration="1427000" />
       <workItem from="1587851022868" duration="60000" />
       <workItem from="1587879611380" duration="29638000" />
-      <workItem from="1587924793150" duration="3174000" />
+      <workItem from="1587924793150" duration="3442000" />
+      <workItem from="1587988913170" duration="20079000" />
     </task>
     <task id="LOCAL-00001" summary="Added DeadLetterQueue, Branch and Branch with Processor Streams">
       <created>1585520208495</created>
@@ -318,11 +299,11 @@
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="1781" y="226" width="1454" height="993" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.3373.1413@67.27.3373.1413" timestamp="1587894184742" />
-    <state x="647" y="459" width="524" height="510" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587921181196">
+    <state x="647" y="459" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587999398357">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="592" y="459" width="524" height="510" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.3440.1413@0.27.3440.1413" timestamp="1585509518587" />
-    <state x="647" y="459" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.3373.1413@67.27.3373.1413" timestamp="1587921181196" />
+    <state x="647" y="459" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.3373.1413@67.27.3373.1413" timestamp="1587999398357" />
     <state x="756" y="471" width="894" height="491" key="#org.jetbrains.debugger.memory.view.InstancesWindow" timestamp="1585076515896">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -335,56 +316,56 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="713" y="274" width="1483" height="876" key="CommitChangelistDialog2/0.27.3440.1413@0.27.3440.1413" timestamp="1585520208395" />
-    <state width="513" height="526" key="DebuggerActiveHint" timestamp="1587924917558">
+    <state width="513" height="526" key="DebuggerActiveHint" timestamp="1588003509529">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="453" height="526" key="DebuggerActiveHint/0.27.3440.1413@0.27.3440.1413" timestamp="1585076481181" />
-    <state width="513" height="526" key="DebuggerActiveHint/67.27.3373.1413@67.27.3373.1413" timestamp="1587924917558" />
+    <state width="513" height="526" key="DebuggerActiveHint/67.27.3373.1413@67.27.3373.1413" timestamp="1588003509529" />
     <state x="561" y="490" width="611" height="513" key="FileChooserDialogImpl" timestamp="1587880598792">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="504" y="490" width="424" height="491" key="FileChooserDialogImpl/0.27.3440.1413@0.27.3440.1413" timestamp="1585078492524" />
     <state x="561" y="490" width="611" height="513" key="FileChooserDialogImpl/67.27.3373.1413@67.27.3373.1413" timestamp="1587880598792" />
-    <state width="1807" height="476" key="GridCell.Tab.0.bottom" timestamp="1587930536308">
+    <state width="1775" height="459" key="GridCell.Tab.0.bottom" timestamp="1588014692055">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="1661" height="385" key="GridCell.Tab.0.bottom/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186825" />
-    <state width="1807" height="476" key="GridCell.Tab.0.bottom/67.27.3373.1413@67.27.3373.1413" timestamp="1587930536308" />
-    <state width="1807" height="476" key="GridCell.Tab.0.center" timestamp="1587930536308">
+    <state width="1775" height="459" key="GridCell.Tab.0.bottom/67.27.3373.1413@67.27.3373.1413" timestamp="1588014692055" />
+    <state width="1775" height="459" key="GridCell.Tab.0.center" timestamp="1588014692054">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="1661" height="385" key="GridCell.Tab.0.center/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186824" />
-    <state width="1807" height="476" key="GridCell.Tab.0.center/67.27.3373.1413@67.27.3373.1413" timestamp="1587930536308" />
-    <state width="1807" height="476" key="GridCell.Tab.0.left" timestamp="1587930536308">
+    <state width="1775" height="459" key="GridCell.Tab.0.center/67.27.3373.1413@67.27.3373.1413" timestamp="1588014692054" />
+    <state width="1775" height="459" key="GridCell.Tab.0.left" timestamp="1588014692054">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="1661" height="385" key="GridCell.Tab.0.left/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186824" />
-    <state width="1807" height="476" key="GridCell.Tab.0.left/67.27.3373.1413@67.27.3373.1413" timestamp="1587930536308" />
-    <state width="1807" height="476" key="GridCell.Tab.0.right" timestamp="1587930536308">
+    <state width="1775" height="459" key="GridCell.Tab.0.left/67.27.3373.1413@67.27.3373.1413" timestamp="1588014692054" />
+    <state width="1775" height="459" key="GridCell.Tab.0.right" timestamp="1588014692055">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="1661" height="385" key="GridCell.Tab.0.right/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186825" />
-    <state width="1807" height="476" key="GridCell.Tab.0.right/67.27.3373.1413@67.27.3373.1413" timestamp="1587930536308" />
-    <state width="1807" height="476" key="GridCell.Tab.1.bottom" timestamp="1587930536308">
+    <state width="1775" height="459" key="GridCell.Tab.0.right/67.27.3373.1413@67.27.3373.1413" timestamp="1588014692055" />
+    <state width="1775" height="471" key="GridCell.Tab.1.bottom" timestamp="1588011659384">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="2291" height="450" key="GridCell.Tab.1.bottom/0.27.3440.1413@0.27.3440.1413" timestamp="1585078746781" />
-    <state width="1807" height="476" key="GridCell.Tab.1.bottom/67.27.3373.1413@67.27.3373.1413" timestamp="1587930536308" />
-    <state width="1807" height="476" key="GridCell.Tab.1.center" timestamp="1587930536308">
+    <state width="1775" height="471" key="GridCell.Tab.1.bottom/67.27.3373.1413@67.27.3373.1413" timestamp="1588011659384" />
+    <state width="1775" height="471" key="GridCell.Tab.1.center" timestamp="1588011659384">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="2291" height="450" key="GridCell.Tab.1.center/0.27.3440.1413@0.27.3440.1413" timestamp="1585078746780" />
-    <state width="1807" height="476" key="GridCell.Tab.1.center/67.27.3373.1413@67.27.3373.1413" timestamp="1587930536308" />
-    <state width="1807" height="476" key="GridCell.Tab.1.left" timestamp="1587930536308">
+    <state width="1775" height="471" key="GridCell.Tab.1.center/67.27.3373.1413@67.27.3373.1413" timestamp="1588011659384" />
+    <state width="1775" height="471" key="GridCell.Tab.1.left" timestamp="1588011659384">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="2291" height="450" key="GridCell.Tab.1.left/0.27.3440.1413@0.27.3440.1413" timestamp="1585078746780" />
-    <state width="1807" height="476" key="GridCell.Tab.1.left/67.27.3373.1413@67.27.3373.1413" timestamp="1587930536308" />
-    <state width="1807" height="476" key="GridCell.Tab.1.right" timestamp="1587930536308">
+    <state width="1775" height="471" key="GridCell.Tab.1.left/67.27.3373.1413@67.27.3373.1413" timestamp="1588011659384" />
+    <state width="1775" height="471" key="GridCell.Tab.1.right" timestamp="1588011659384">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="2291" height="450" key="GridCell.Tab.1.right/0.27.3440.1413@0.27.3440.1413" timestamp="1585078746781" />
-    <state width="1807" height="476" key="GridCell.Tab.1.right/67.27.3373.1413@67.27.3373.1413" timestamp="1587930536308" />
+    <state width="1775" height="471" key="GridCell.Tab.1.right/67.27.3373.1413@67.27.3373.1413" timestamp="1588011659384" />
     <state x="254" y="391" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1584289493592">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -415,11 +396,11 @@
     </state>
     <state x="519" y="632" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.3440.1413@0.27.3440.1413" timestamp="1585071491872" />
     <state x="576" y="632" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.3373.1413@67.27.3373.1413" timestamp="1587850436863" />
-    <state x="512" y="472" width="524" height="528" key="extract.method.dialog" timestamp="1587897325630">
+    <state x="103" y="615" width="524" height="528" key="extract.method.dialog" timestamp="1588001256480">
       <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="454" y="472" width="524" height="528" key="extract.method.dialog/0.27.3440.1413@0.27.3440.1413" timestamp="1584206278027" />
-    <state x="512" y="472" width="524" height="528" key="extract.method.dialog/67.27.3373.1413@67.27.3373.1413" timestamp="1587897325630" />
+    <state x="103" y="615" width="524" height="528" key="extract.method.dialog/67.27.3373.1413@67.27.3373.1413" timestamp="1588001256480" />
     <state x="370" y="293" width="703" height="879" key="find.popup" timestamp="1584210661623">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -444,29 +425,6 @@
           <url>jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-streams/2.4.1/kafka-streams-2.4.1.jar!/org/apache/kafka/streams/processor/internals/RecordDeserializer.class</url>
           <line>34</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessor.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessor.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/wiadrodanych/streams/models/serdes/InputZtmRecordSerDeTest.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/wiadrodanych/streams/models/serdes/InputZtmRecordSerDeTest.java</url>
-          <line>37</line>
-          <properties class="wiadrodanych.streams.models.serdes.InputZtmRecordSerDeTest" method="ztmExperimentRecordDeserializationWorks">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,13 +1,8 @@
 package wiadrodanych.streams.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.SerializedName;
-
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.Date;
 
-public class OutputZtmRecord {
+public class ZtmRecord {
     public String lines;
     public double lon;
     public double lat;
@@ -15,16 +10,13 @@ public class OutputZtmRecord {
     public String brigade;
     public Date time;
     public double speed;
-    public double rotation;
     public double distance;
+    public double bearing;
 
-    @JsonIgnore
-    public boolean toBeDeleted = false;
-
-    public OutputZtmRecord() {
+    public ZtmRecord() {
     }
 
-    public OutputZtmRecord(InputZtmRecord record) {
+    public ZtmRecord(InputZtmRecord record) {
         this.lines = record.lines;
         this.lon = record.lon;
         this.lat = record.lat;

@@ -3,7 +3,7 @@ package wiadrodanych.streams.models.serdes;
 import org.junit.Assert;
 import org.junit.Test;
 import wiadrodanych.streams.models.InputZtmRecord;
-import wiadrodanych.streams.models.OutputZtmRecord;
+import wiadrodanych.streams.models.ZtmRecord;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -35,11 +35,11 @@ public class InputZtmRecordSerDeTest {
     }
 
     @Test
-    public void ztmExperimentRecordDeserializationWorks(){
-        InputZtmRecordDeserializerExperiment deserializer = new InputZtmRecordDeserializerExperiment();
+    public void inputZtmRecordToZtmRecordDeserializerWorks(){
+        InputZtmRecordToZtmRecordDeserializer deserializer = new InputZtmRecordToZtmRecordDeserializer();
 
         String rawRecord = "{\"Lines\": \"204\", \"Lon\": 21.043399, \"VehicleNumber\": \"1042\", \"Time\": \"2020-04-24 21:14:34\", \"Lat\": 52.26617, \"Brigade\": \"04\"}";
-        OutputZtmRecord record =  deserializer.deserialize(null, rawRecord.getBytes());
+        ZtmRecord record =  deserializer.deserialize(null, rawRecord.getBytes());
 
         Assert.assertEquals("204",record.lines);
         Assert.assertEquals(21.043399,record.lon,0.0001);
@@ -47,18 +47,5 @@ public class InputZtmRecordSerDeTest {
         Assert.assertEquals("04",record.brigade);
         Assert.assertEquals("1042",record.vehicleNumber);
         Assert.assertEquals("204",record.lines);
-    }
-
-    @Test
-    public void deserializeAndSerialize(){
-        InputZtmRecordDeserializerExperiment deserializer = new InputZtmRecordDeserializerExperiment();
-        GenericSerializer serializer = new GenericSerializer();
-
-        String rawRecord = "{\"Lines\": \"204\", \"Lon\": 21.043399, \"VehicleNumber\": \"1042\", \"Time\": \"2020-04-24 21:14:34\", \"Lat\": 52.26617, \"Brigade\": \"04\"}";
-        OutputZtmRecord record =  deserializer.deserialize(null, rawRecord.getBytes());
-
-        String serialized = new String(serializer.serialize("",record));
-        GenericDeserializer<OutputZtmRecord> ztmDeserializer = new GenericDeserializer<>();
-        OutputZtmRecord newRecord = ztmDeserializer.deserialize(null,serialized.getBytes());
     }
 }

@@ -3,12 +3,12 @@ package wiadrodanych.streams.models.serdes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.apache.kafka.common.serialization.Deserializer;
-import wiadrodanych.streams.models.OutputZtmRecord;
+import wiadrodanych.streams.models.ZtmRecord;
 
 import java.nio.charset.Charset;
 import java.util.Map;
 
-public class ZtmRecordDeserializer implements Deserializer<OutputZtmRecord> {
+public class ZtmRecordDeserializer implements Deserializer<ZtmRecord> {
 
     private static final Charset CHARSET = Charset.forName("UTF-8");
     static private Gson gson = new GsonBuilder()
@@ -20,9 +20,9 @@ public class ZtmRecordDeserializer implements Deserializer<OutputZtmRecord> {
     }
 
     @Override
-    public OutputZtmRecord deserialize(String s, byte[] bytes) {
+    public ZtmRecord deserialize(String s, byte[] bytes) {
         String person = new String(bytes, CHARSET);
-        return gson.fromJson(person, OutputZtmRecord.class);
+        return gson.fromJson(person, ZtmRecord.class);
     }
 
     @Override

@@ -10,19 +10,16 @@ import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.Topology;
 import org.apache.kafka.streams.errors.LogAndContinueExceptionHandler;
-import org.apache.kafka.streams.kstream.Consumed;
-import org.apache.kafka.streams.kstream.Produced;
 import org.apache.kafka.streams.state.StoreBuilder;
 import org.apache.kafka.streams.state.Stores;
-import wiadrodanych.streams.models.InputZtmRecord;
-import wiadrodanych.streams.models.OutputZtmRecord;
-import wiadrodanych.streams.models.serdes.*;
+import wiadrodanych.streams.models.ZtmRecord;
+import wiadrodanych.streams.models.serdes.GenericSerializer;
+import wiadrodanych.streams.models.serdes.InputZtmRecordToZtmRecordDeserializer;
+import wiadrodanych.streams.models.serdes.ZtmRecordDeserializer;
 import wiadrodanych.streams.processors.ZtmProcessor;
 
-import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 public class ZtmStream {
 
@@ -62,7 +59,7 @@ public class ZtmStream {
 
     public Topology createTopology() {
         final StreamsBuilder builder = new StreamsBuilder();
-        final Serde<OutputZtmRecord> outputZtmRecordSerde = Serdes.serdeFrom(new GenericSerializer(), new GenericDeserializer<OutputZtmRecord>());
+        final Serde<ZtmRecord> outputZtmRecordSerde = Serdes.serdeFrom(new GenericSerializer(), new ZtmRecordDeserializer());///new ZtmRecordDeserializer());
 
         StoreBuilder ztmStoreBuilder =
                 Stores.keyValueStoreBuilder(
@@ -72,16 +69,12 @@ public class ZtmStream {
                 );
 
         Topology topology = new Topology();
-        topology.addSource("Source",new StringDeserializer(), new InputZtmRecordDeserializerExperiment(),INPUT_TOPIC)
+        topology.addSource("Source",new StringDeserializer(), new InputZtmRecordToZtmRecordDeserializer(),INPUT_TOPIC)
                 .addProcessor("ZtmProcess", () -> new ZtmProcessor(), "Source")
                 .addStateStore(ztmStoreBuilder, "ZtmProcess")
                 .addSink("Sink", OUTPUT_TOPIC, new StringSerializer(), new GenericSerializer(),"ZtmProcess");
 
         return topology;
-    }
-
-    private boolean filterNewRecords(InputZtmRecord v) {
-        return v.time.after(new Date(System.currentTimeMillis() - TimeUnit.MINUTES.toMillis(1)));
     }
 
     private static Properties createProperties() {
