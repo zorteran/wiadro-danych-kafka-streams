@@ -8,13 +8,37 @@
       <artifact name="wiadrodanych-kafka-streams:jar" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="62d14eac-b584-4d28-8d2e-a7686779e008" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/utils/GeoTools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsJsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsJsonStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsWithProcessorJsonStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/BranchExceptionsWithProcessorJsonStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processes/MessageFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processes/MessageFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/queues/DeadLetterQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/queues/DeadLetterQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/ZtmStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/ZtmStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/OutputZtmRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/ZtmRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/InputZtmRecordDeserializerExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/InputZtmRecordToZtmRecordDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/ZtmRecordDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/models/serdes/ZtmRecordDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wiadrodanych/streams/processors/ZtmProcessorSupplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/SerDeJsonStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/SerDeJsonStreamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/ZtmStreamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/ZtmStreamTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/models/serdes/InputZtmRecordSerDeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wiadrodanych/streams/models/serdes/InputZtmRecordSerDeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +65,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Scala Worksheet" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,32 +81,35 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Kafdrop" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="wiadrodanych.streams.models.serdes" />
+      <recent name="wiadrodanych.streams.models" />
       <recent name="wiadrodanych.streams" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="wiadrodanych.streams.models" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="BranchExceptionsJsonStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.BranchExceptionsJsonStream" />
-      <module name="wiadrodanych-kafka-streams" />
+  <component name="RunManager" selected="JUnit.ZtmStreamTest">
+    <configuration name="ZtmStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.ZtmStream" />
+      <module name="wiadro-danych-kafka-streams" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="wiadrodanych.streams.*" />
@@ -91,65 +120,79 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BranchExceptionsWithProcessorJsonStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.BranchExceptionsWithProcessorJsonStream" />
-      <module name="wiadrodanych-kafka-streams" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wiadrodanych.streams.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="All in wiadro-danych-kafka-streams" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiadro-danych-kafka-streams" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FilterExceptionsJsonStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.FilterExceptionsJsonStream" />
-      <module name="wiadrodanych-kafka-streams" />
+    <configuration name="ZtmStreamTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiadro-danych-kafka-streams" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="wiadrodanych.streams.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="wiadrodanych.streams" />
+      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.ZtmStreamTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SerDeByHandJsonStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.SerDeByHandJsonStream" />
-      <module name="wiadrodanych-kafka-streams" />
+    <configuration name="ZtmStreamTest.streamComputesAreCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiadro-danych-kafka-streams" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="wiadrodanych.streams.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="wiadrodanych.streams" />
+      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.ZtmStreamTest" />
+      <option name="METHOD_NAME" value="streamComputesAreCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SerDeJsonStream" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.SerDeJsonStream" />
-      <module name="wiadrodanych-kafka-streams" />
+    <configuration name="ZtmStreamTest.streamComputesSomething" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiadro-danych-kafka-streams" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="wiadrodanych.streams.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="wiadrodanych.streams" />
+      <option name="MAIN_CLASS_NAME" value="wiadrodanych.streams.ZtmStreamTest" />
+      <option name="METHOD_NAME" value="streamComputesSomething" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BranchExceptionsWithProcessorJsonStream" />
-        <item itemvalue="Application.BranchExceptionsJsonStream" />
-        <item itemvalue="Application.FilterExceptionsJsonStream" />
-        <item itemvalue="Application.SerDeJsonStream" />
-        <item itemvalue="Application.SerDeByHandJsonStream" />
+        <item itemvalue="JUnit.ZtmStreamTest" />
+        <item itemvalue="JUnit.All in wiadro-danych-kafka-streams" />
+        <item itemvalue="JUnit.ZtmStreamTest.streamComputesAreCorrectly" />
+        <item itemvalue="JUnit.ZtmStreamTest.streamComputesSomething" />
+        <item itemvalue="Application.ZtmStream" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +217,14 @@
       <workItem from="1585251567381" duration="4876000" />
       <workItem from="1585484220934" duration="3009000" />
       <workItem from="1585502681550" duration="12193000" />
+      <workItem from="1587489194148" duration="210000" />
+      <workItem from="1587793332074" duration="74000" />
+      <workItem from="1587837800867" duration="6748000" />
+      <workItem from="1587849281519" duration="1427000" />
+      <workItem from="1587851022868" duration="60000" />
+      <workItem from="1587879611380" duration="29638000" />
+      <workItem from="1587924793150" duration="3442000" />
+      <workItem from="1587988913170" duration="20079000" />
     </task>
     <task id="LOCAL-00001" summary="Added DeadLetterQueue, Branch and Branch with Processor Streams">
       <created>1585520208495</created>
@@ -186,20 +237,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added DeadLetterQueue, Branch and Branch with Processor Streams" />
@@ -212,14 +262,31 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="316" y="394" width="800" height="684" key="#Big_Data_Tools_Connections/0.27.3440.1413@0.27.3440.1413" timestamp="1584280155474" />
+    <state x="1656" y="223" width="1534" height="845" key="#Project_Structure" timestamp="1587880998469">
+      <screen x="67" y="27" width="3373" height="1413" />
+    </state>
+    <state x="1656" y="223" width="1534" height="845" key="#Project_Structure/67.27.3373.1413@67.27.3373.1413" timestamp="1587880998469" />
     <state x="454" y="491" width="524" height="491" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1585255021866">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="454" y="491" width="524" height="491" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.27.3440.1413@0.27.3440.1413" timestamp="1585255021866" />
-    <state x="529" y="444" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1585254591872">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state x="2346" y="582" width="324" height="284" key="#com.intellij.debugger.actions.ViewTextAction" timestamp="1587927003248">
+      <screen x="67" y="27" width="3373" height="1413" />
+    </state>
+    <state x="2346" y="582" width="324" height="284" key="#com.intellij.debugger.actions.ViewTextAction/67.27.3373.1413@67.27.3373.1413" timestamp="1587927003248" />
+    <state x="586" y="444" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1587918866756">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="529" y="444" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.27.3440.1413@0.27.3440.1413" timestamp="1585254591872" />
+    <state x="586" y="444" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/67.27.3373.1413@67.27.3373.1413" timestamp="1587918866756" />
+    <state x="2115" y="392" width="784" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1587880644274">
+      <screen x="67" y="27" width="3373" height="1413" />
+    </state>
+    <state x="2115" y="392" width="784" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/67.27.3373.1413@67.27.3373.1413" timestamp="1587880644274" />
+    <state x="2083" y="270" width="669" height="751" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1587850910628">
+      <screen x="67" y="27" width="3373" height="1413" />
+    </state>
+    <state x="2083" y="270" width="669" height="751" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/67.27.3373.1413@67.27.3373.1413" timestamp="1587850910628" />
     <state x="429" y="448" width="624" height="535" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585067773531">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -228,10 +295,15 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="574" y="596" width="570" height="248" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.3440.1413@0.27.3440.1413" timestamp="1585520135696" />
-    <state x="592" y="459" width="524" height="510" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585509518587">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state x="1781" y="226" width="1454" height="993" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587894184742">
+      <screen x="67" y="27" width="3373" height="1413" />
+    </state>
+    <state x="1781" y="226" width="1454" height="993" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.3373.1413@67.27.3373.1413" timestamp="1587894184742" />
+    <state x="647" y="459" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587999398357">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="592" y="459" width="524" height="510" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.3440.1413@0.27.3440.1413" timestamp="1585509518587" />
+    <state x="647" y="459" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.3373.1413@67.27.3373.1413" timestamp="1587999398357" />
     <state x="756" y="471" width="894" height="491" key="#org.jetbrains.debugger.memory.view.InstancesWindow" timestamp="1585076515896">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -244,54 +316,69 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="713" y="274" width="1483" height="876" key="CommitChangelistDialog2/0.27.3440.1413@0.27.3440.1413" timestamp="1585520208395" />
-    <state width="453" height="526" key="DebuggerActiveHint" timestamp="1585076481181">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="513" height="526" key="DebuggerActiveHint" timestamp="1588003509529">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="453" height="526" key="DebuggerActiveHint/0.27.3440.1413@0.27.3440.1413" timestamp="1585076481181" />
-    <state x="504" y="490" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585078492524">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="513" height="526" key="DebuggerActiveHint/67.27.3373.1413@67.27.3373.1413" timestamp="1588003509529" />
+    <state x="561" y="490" width="611" height="513" key="FileChooserDialogImpl" timestamp="1587880598792">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="504" y="490" width="424" height="491" key="FileChooserDialogImpl/0.27.3440.1413@0.27.3440.1413" timestamp="1585078492524" />
-    <state width="1661" height="385" key="GridCell.Tab.0.bottom" timestamp="1585520186825">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state x="561" y="490" width="611" height="513" key="FileChooserDialogImpl/67.27.3373.1413@67.27.3373.1413" timestamp="1587880598792" />
+    <state width="1775" height="459" key="GridCell.Tab.0.bottom" timestamp="1588014692055">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="1661" height="385" key="GridCell.Tab.0.bottom/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186825" />
-    <state width="1661" height="385" key="GridCell.Tab.0.center" timestamp="1585520186824">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="1775" height="459" key="GridCell.Tab.0.bottom/67.27.3373.1413@67.27.3373.1413" timestamp="1588014692055" />
+    <state width="1775" height="459" key="GridCell.Tab.0.center" timestamp="1588014692054">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="1661" height="385" key="GridCell.Tab.0.center/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186824" />
-    <state width="1661" height="385" key="GridCell.Tab.0.left" timestamp="1585520186824">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="1775" height="459" key="GridCell.Tab.0.center/67.27.3373.1413@67.27.3373.1413" timestamp="1588014692054" />
+    <state width="1775" height="459" key="GridCell.Tab.0.left" timestamp="1588014692054">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="1661" height="385" key="GridCell.Tab.0.left/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186824" />
-    <state width="1661" height="385" key="GridCell.Tab.0.right" timestamp="1585520186825">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="1775" height="459" key="GridCell.Tab.0.left/67.27.3373.1413@67.27.3373.1413" timestamp="1588014692054" />
+    <state width="1775" height="459" key="GridCell.Tab.0.right" timestamp="1588014692055">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="1661" height="385" key="GridCell.Tab.0.right/0.27.3440.1413@0.27.3440.1413" timestamp="1585520186825" />
-    <state width="2291" height="450" key="GridCell.Tab.1.bottom" timestamp="1585078746781">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="1775" height="459" key="GridCell.Tab.0.right/67.27.3373.1413@67.27.3373.1413" timestamp="1588014692055" />
+    <state width="1775" height="471" key="GridCell.Tab.1.bottom" timestamp="1588011659384">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="2291" height="450" key="GridCell.Tab.1.bottom/0.27.3440.1413@0.27.3440.1413" timestamp="1585078746781" />
-    <state width="2291" height="450" key="GridCell.Tab.1.center" timestamp="1585078746780">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="1775" height="471" key="GridCell.Tab.1.bottom/67.27.3373.1413@67.27.3373.1413" timestamp="1588011659384" />
+    <state width="1775" height="471" key="GridCell.Tab.1.center" timestamp="1588011659384">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="2291" height="450" key="GridCell.Tab.1.center/0.27.3440.1413@0.27.3440.1413" timestamp="1585078746780" />
-    <state width="2291" height="450" key="GridCell.Tab.1.left" timestamp="1585078746780">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="1775" height="471" key="GridCell.Tab.1.center/67.27.3373.1413@67.27.3373.1413" timestamp="1588011659384" />
+    <state width="1775" height="471" key="GridCell.Tab.1.left" timestamp="1588011659384">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="2291" height="450" key="GridCell.Tab.1.left/0.27.3440.1413@0.27.3440.1413" timestamp="1585078746780" />
-    <state width="2291" height="450" key="GridCell.Tab.1.right" timestamp="1585078746781">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state width="1775" height="471" key="GridCell.Tab.1.left/67.27.3373.1413@67.27.3373.1413" timestamp="1588011659384" />
+    <state width="1775" height="471" key="GridCell.Tab.1.right" timestamp="1588011659384">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state width="2291" height="450" key="GridCell.Tab.1.right/0.27.3440.1413@0.27.3440.1413" timestamp="1585078746781" />
+    <state width="1775" height="471" key="GridCell.Tab.1.right/67.27.3373.1413@67.27.3373.1413" timestamp="1588011659384" />
     <state x="254" y="391" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1584289493592">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="254" y="391" width="924" height="691" key="Maven.ArtifactSearchDialog/0.27.3440.1413@0.27.3440.1413" timestamp="1584289493592" />
-    <state x="210" y="367" width="1022" height="737" key="SettingsEditor" timestamp="1584304717632">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state x="1727" y="460" width="1022" height="737" key="SettingsEditor" timestamp="1587850378374">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="210" y="367" width="1022" height="737" key="SettingsEditor/0.27.3440.1413@0.27.3440.1413" timestamp="1584304717632" />
+    <state x="1727" y="460" key="SettingsEditor/67.27.3373.1413@67.27.3373.1413" timestamp="1587850378374" />
+    <state x="2440" y="479" width="639" height="524" key="StructurePopup" timestamp="1587846095282">
+      <screen x="67" y="27" width="3373" height="1413" />
+    </state>
+    <state x="2440" y="479" width="639" height="524" key="StructurePopup/67.27.3373.1413@67.27.3373.1413" timestamp="1587846095282" />
     <state x="454" y="446" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1585520216949">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -304,14 +391,16 @@
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
     <state x="512" y="326" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.3440.1413@0.27.3440.1413" timestamp="1585255090122" />
-    <state x="519" y="632" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585071491872">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state x="576" y="632" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587850436863">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="519" y="632" width="445" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.3440.1413@0.27.3440.1413" timestamp="1585071491872" />
-    <state x="454" y="472" width="524" height="528" key="extract.method.dialog" timestamp="1584206278027">
-      <screen x="0" y="27" width="3440" height="1413" />
+    <state x="576" y="632" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.3373.1413@67.27.3373.1413" timestamp="1587850436863" />
+    <state x="103" y="615" width="524" height="528" key="extract.method.dialog" timestamp="1588001256480">
+      <screen x="67" y="27" width="3373" height="1413" />
     </state>
     <state x="454" y="472" width="524" height="528" key="extract.method.dialog/0.27.3440.1413@0.27.3440.1413" timestamp="1584206278027" />
+    <state x="103" y="615" width="524" height="528" key="extract.method.dialog/67.27.3373.1413@67.27.3373.1413" timestamp="1588001256480" />
     <state x="370" y="293" width="703" height="879" key="find.popup" timestamp="1584210661623">
       <screen x="0" y="27" width="3440" height="1413" />
     </state>
@@ -339,5 +428,20 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="java.lang.String" fieldName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="ztmRecordStore.all()" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wiadro_danych_kafka_streams$ZtmStreamTest_streamFiltersOldRecords.ic" NAME="ZtmStreamTest.streamFiltersOldRecords Coverage Results" MODIFIED="1587926954974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>wiadrodanych.streams.*</FILTER>
+    </SUITE>
   </component>
 </project>
