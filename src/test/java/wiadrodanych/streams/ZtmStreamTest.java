@@ -32,8 +32,9 @@ public class ZtmStreamTest {
         ZtmStream ztmStream = new ZtmStream();
         Topology topology = ztmStream.createTopology();
         testDriver = new TopologyTestDriver(topology, config);
-        inputTopic = testDriver.createInputTopic(ZtmStream.INPUT_TOPIC, stringSerializer, stringSerializer);
-        outputTopic = testDriver.createOutputTopic(ZtmStream.OUTPUT_TOPIC, stringDeserializer, ztmRecordDeserializer);
+        inputTopic = testDriver.createInputTopic(ztmStream.inputTopic, stringSerializer, stringSerializer);
+        outputTopic = testDriver.createOutputTopic(ztmStream.outputTopic, stringDeserializer, ztmRecordDeserializer);
+
     }
 
     @After

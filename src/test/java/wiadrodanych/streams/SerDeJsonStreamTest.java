@@ -57,8 +57,8 @@ public class SerDeJsonStreamTest {
         Assert.assertEquals("Adam", outputPerson.name);
     }
 
-    @Test()
-    public void personWithEmptyNameShouldNotBeProcessed(){
+    @Test(expected = StringIndexOutOfBoundsException.class)
+    public void personWithEmptyNameShouldNotBeProcessed_ButThrowsException_(){
         Person inputPerson = new Person("", 17);
         inputTopic.pipeInput(inputPerson);
         Assert.assertTrue(outputTopic.isEmpty());

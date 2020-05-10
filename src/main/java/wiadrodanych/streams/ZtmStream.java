@@ -17,16 +17,19 @@ import wiadrodanych.streams.models.serdes.GenericSerializer;
 import wiadrodanych.streams.models.serdes.InputZtmRecordToZtmRecordDeserializer;
 import wiadrodanych.streams.models.serdes.ZtmRecordDeserializer;
 import wiadrodanych.streams.processors.ZtmProcessor;
+import wiadrodanych.utils.EnvTools;
 
 import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
 
 public class ZtmStream {
 
-    public static final String INPUT_TOPIC = "ztm-input";
-    public static final String OUTPUT_TOPIC = "ztm-output";
+    public String inputTopic;
+    public String outputTopic;
 
     public ZtmStream() {
+        inputTopic = EnvTools.getEnvValue(EnvTools.INPUT_TOPIC, "ztm-input");
+        outputTopic = EnvTools.getEnvValue(EnvTools.OUTPUT_TOPIC, "ztm-output");
     }
 
     public static void main(String[] args) throws Exception {
@@ -69,18 +72,20 @@ public class ZtmStream {
                 );
 
         Topology topology = new Topology();
-        topology.addSource("Source",new StringDeserializer(), new InputZtmRecordToZtmRecordDeserializer(),INPUT_TOPIC)
+        topology.addSource("Source",new StringDeserializer(), new InputZtmRecordToZtmRecordDeserializer(), inputTopic)
                 .addProcessor("ZtmProcess", () -> new ZtmProcessor(), "Source")
                 .addStateStore(ztmStoreBuilder, "ZtmProcess")
-                .addSink("Sink", OUTPUT_TOPIC, new StringSerializer(), new GenericSerializer(),"ZtmProcess");
+                .addSink("Sink", outputTopic, new StringSerializer(), new GenericSerializer(),"ZtmProcess");
 
         return topology;
     }
 
     private static Properties createProperties() {
         Properties props = new Properties();
-        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "wiaderko-ztm-stream");
-        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:29092");
+        String appIdConfig = EnvTools.getEnvValue(EnvTools.APPLICATION_ID_CONFIG, "wiaderko-ztm-stream");
+        String bootstrapServersConfig =  EnvTools.getEnvValue(EnvTools.BOOTSTRAP_SERVERS_CONFIG, "localhost:29092");
+        props.put(StreamsConfig.APPLICATION_ID_CONFIG, appIdConfig);
+        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServersConfig);
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,"earliest");
         props.put(StreamsConfig.DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG, LogAndContinueExceptionHandler.class);
         return props;
